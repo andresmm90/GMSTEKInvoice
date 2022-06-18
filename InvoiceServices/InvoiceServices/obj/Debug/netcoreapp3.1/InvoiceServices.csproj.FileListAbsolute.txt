@@ -130,3 +130,4 @@ C:\Users\ANDRES\Documents\Andres\Repositorios\GMSTEK\PruebaTecnica\InvoiceServic
 C:\Users\ANDRES\Documents\Andres\Repositorios\GMSTEK\PruebaTecnica\InvoiceServices\InvoiceServices\obj\Debug\netcoreapp3.1\InvoiceServices.dll
 C:\Users\ANDRES\Documents\Andres\Repositorios\GMSTEK\PruebaTecnica\InvoiceServices\InvoiceServices\obj\Debug\netcoreapp3.1\InvoiceServices.pdb
 C:\Users\ANDRES\Documents\Andres\Repositorios\GMSTEK\PruebaTecnica\InvoiceServices\InvoiceServices\obj\Debug\netcoreapp3.1\InvoiceServices.genruntimeconfig.cache
+C:\Users\ANDRES\Documents\Andres\Repositorios\GMSTEK\PruebaTecnica\InvoiceServices\InvoiceServices\obj\Debug\netcoreapp3.1\InvoiceServices.csproj.AssemblyReference.cache
