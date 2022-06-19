@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/0a7b702e-6603-4d7a-b609-f0ddac56f4d9/microsoft.web/sites/subscriptions/0a7b702e-6603-4d7a-b609-f0ddac56f4d9/resourceGroups/PruebasTecnicas/providers/Microsoft.Web/sites/InvoiceAPP",
+    "appService.deploySubpath": "."
+}
