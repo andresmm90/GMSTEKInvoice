@@ -38,6 +38,14 @@ namespace InvoiceServices.Controllers
             return await invoiceDetailService.GetById(id);
         }
 
+        [HttpGet("GetByInvoiceId/{id}")]
+        public IEnumerable<InvoiceDetail> GetByName(int id)
+        {
+            var invoiceDetailService = new InvoiceDetailService(new InvoiceDetailRepository(_context));
+            return invoiceDetailService.GetByInvoiceId(id);
+        }
+
+
         // POST api/<ClientsController>
         [HttpPost]
         public async Task<InvoiceDetail> Post([FromBody] InvoiceDetail value)
@@ -56,10 +64,10 @@ namespace InvoiceServices.Controllers
 
         // DELETE api/<ClientsController>/5
         [HttpDelete("{id}")]
-        public async void DeleteAsync(int id)
+        public async Task<InvoiceDetail> DeleteAsync(int id)
         {
             var invoiceDetailService = new InvoiceDetailService(new InvoiceDetailRepository(_context));
-            await invoiceDetailService.Delete(id);
+            return await invoiceDetailService.Delete(id);
         }
     }
 }

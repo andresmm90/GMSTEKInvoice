@@ -55,10 +55,10 @@ namespace InvoiceServices.Controllers
 
         // DELETE api/<ClientsController>/5
         [HttpDelete("{id}")]
-        public async void DeleteAsync(int id)
+        public async Task<Product> DeleteAsync(int id)
         {
             var clientService = new ProductService(new ProductRepository(_context));
-            await clientService.Delete(id);
+            return await clientService.Delete(id);
         }
     }
 }

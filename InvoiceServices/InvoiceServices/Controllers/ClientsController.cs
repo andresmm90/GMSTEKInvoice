@@ -56,10 +56,10 @@ namespace InvoiceServices.Controllers
 
         // DELETE api/<ClientsController>/5
         [HttpDelete("{id}")]
-        public async void DeleteAsync(int id)
+        public async Task<Client> DeleteAsync(int id)
         {
             var clientService = new ClientService(new ClientRepository(_context));
-            await clientService.Delete(id);
+            return await clientService.Delete(id);
         }
     }
 }

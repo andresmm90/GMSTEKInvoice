@@ -13,7 +13,7 @@ namespace InvoiceServices.Repositories.Implements
         {
             this.context = context;
         }
-        public async Task Delete(int id)
+        public async Task<T> Delete(int id)
         {
             var entity = await GetById(id);
             if (entity == null)
@@ -22,10 +22,11 @@ namespace InvoiceServices.Repositories.Implements
             }
             context.Set<T>().Remove(entity);
             await context.SaveChangesAsync();
+            return entity;
         }
 
         public async Task<IEnumerable<T>> GetAll()
-        {
+        {            
             return await context.Set<T>().ToListAsync();           
         }
 

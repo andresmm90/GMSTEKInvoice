@@ -9,6 +9,6 @@ namespace InvoiceServices.Repositories
         Task<T> GetById(int id);
         Task<T> Insert(T entity);
         Task<T> Update(T entity);
-        Task Delete(int id);
+        Task<T> Delete(int id);
     }
 }

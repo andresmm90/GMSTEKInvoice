@@ -12,11 +12,11 @@ namespace InvoiceServices.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class InvoiceController : ControllerBase
+    public class InvoicesController : ControllerBase
     {
         private readonly InvoiceDBContext _context;
 
-        public InvoiceController(InvoiceDBContext context)
+        public InvoicesController(InvoiceDBContext context)
         {
             _context = context;
         }
@@ -56,10 +56,10 @@ namespace InvoiceServices.Controllers
 
         // DELETE api/<ClientsController>/5
         [HttpDelete("{id}")]
-        public async void DeleteAsync(int id)
+        public async Task<Invoice> DeleteAsync(int id)
         {
             var invoiceService = new InvoiceService(new InvoiceRepository(_context));
-            await invoiceService.Delete(id);
+            return await  invoiceService.Delete(id);
         }
     }
 }

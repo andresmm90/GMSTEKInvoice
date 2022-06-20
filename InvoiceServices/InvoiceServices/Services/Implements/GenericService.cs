@@ -13,9 +13,9 @@ namespace InvoiceServices.Services.Implements
         {
             this.repository = repository;
         }
-        public async Task Delete(int id)
+        public async Task<T> Delete(int id)
         {
-            await repository.Delete(id);
+           return await repository.Delete(id);
         }
 
         public async Task<IEnumerable<T>> GetAll()
